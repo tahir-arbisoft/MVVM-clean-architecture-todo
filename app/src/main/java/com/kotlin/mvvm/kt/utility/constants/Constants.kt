@@ -1,6 +1,10 @@
 package com.kotlin.mvvm.kt.utility.constants
 
 object Constants {
+    const val ZERO_RECORD = "No Data Found"
+    const val NO_NETWORK = "No Network"
+    const val STATUS_SUCCESS = "Success"
+
     const val ONE_SECOND: Long = 1000
     const val PIN_COPIED_TIME: Long = 2750
     const val ACCEPT = "Accept"

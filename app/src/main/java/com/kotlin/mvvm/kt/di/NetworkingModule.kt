@@ -5,7 +5,7 @@ import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import com.kotlin.mvvm.BuildConfig
 import com.kotlin.mvvm.kt.data.network.ApiService
 import com.kotlin.mvvm.kt.utility.constants.Constants
-import com.kotlin.mvvm.kt.utility.utils
+import com.kotlin.mvvm.kt.utility.AppUtils
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -57,7 +57,7 @@ object NetworkingModule {
             okHttpClient.build()
             return okHttpClient.build()
         }
-        return utils.getUnPinnedSSLClient(loggingInterceptor, headerInterceptor)
+        return AppUtils.getUnPinnedSSLClient(loggingInterceptor, headerInterceptor)
     }
 
     @Provides

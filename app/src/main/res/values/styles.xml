@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TitleTextStyle" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/s20</item>
+    </style>
+
+    <style name="DateTextStyle" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">@color/brown_grey</item>
+        <item name="android:textSize">@dimen/s14</item>
+    </style>
+
+    <style name="IngressTextStyle" parent="@android:style/Widget.TextView">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/s14</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.Light"></style>
+
+    <style name="ToolBarTitleStyle" parent="@style/Base.TextAppearance.AppCompat.Title">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+</resources>

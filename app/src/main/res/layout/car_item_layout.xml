@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/carLogo"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x_360"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/background"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x_360"
+            android:background="@drawable/car_item_shadow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/carTitle"
+            style="@style/TitleTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x_16"
+            android:layout_marginEnd="@dimen/x_24"
+            android:layout_marginBottom="@dimen/x_24"
+            app:layout_constraintBottom_toBottomOf="@+id/carLogo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="Q2 - En route to myself Q2" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/carDate"
+            style="@style/DateTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x_16"
+            android:layout_marginTop="@dimen/x_8"
+            android:layout_marginEnd="@dimen/x_24"
+            app:layout_constraintBottom_toTopOf="@+id/carIngress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/carTitle"
+            tools:text="29 November 2017, 15:11" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/carIngress"
+            style="@style/IngressTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x_16"
+            android:layout_marginTop="@dimen/x_13"
+            android:layout_marginEnd="@dimen/x_24"
+            android:paddingBottom="@dimen/x_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/carDate"
+            tools:text="The Audi Q7 is the result of an ambitious idea: never cease to improve. " />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+
+
