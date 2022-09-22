@@ -1,6 +1,9 @@
 package com.kotlin.mvvm.kt.domain.models.cars
 
 import android.os.Parcelable
+import androidx.room.Entity
+import androidx.room.Index
+import androidx.room.PrimaryKey
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 import com.sevenpeakssoftware.zain.domain.models.getCars.SubContentItem
@@ -11,8 +14,10 @@ import kotlinx.parcelize.Parcelize
  Can add additional property if need for Room operations*/
 
 @Parcelize
+@Entity(tableName = "Car", indices = [Index(value = ["id"], unique = true)])
 data class Car(
 
+    @PrimaryKey(autoGenerate = true)
     val pkId: Int = 0,
 
     @Expose

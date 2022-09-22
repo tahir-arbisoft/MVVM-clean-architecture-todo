@@ -1,11 +1,12 @@
 package com.kotlin.mvvm.kt.di
 
 
+import com.facebook.stetho.okhttp3.StethoInterceptor
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import com.kotlin.mvvm.BuildConfig
 import com.kotlin.mvvm.kt.data.network.ApiService
-import com.kotlin.mvvm.kt.utility.constants.Constants
 import com.kotlin.mvvm.kt.utility.AppUtils
+import com.kotlin.mvvm.kt.utility.constants.Constants
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -54,6 +55,7 @@ object NetworkingModule {
             okHttpClient.connectTimeout(120, TimeUnit.SECONDS)
             okHttpClient.readTimeout(120, TimeUnit.SECONDS)
             okHttpClient.addInterceptor(loggingInterceptor)
+            okHttpClient.addNetworkInterceptor(StethoInterceptor())
             okHttpClient.build()
             return okHttpClient.build()
         }
